@@ -5,6 +5,7 @@
 	"name": "Simple Health Bar",
 	"description": "Adds a simple health bar to the left of the minimap.",
 	"authors": ["Notex"],
+	"contentFolders": ["content"],
 	"frameworkVersion": "2.33.7",
 	"updateCheck": "https://github.com/Notexe/h3-simple-health-bar/releases/latest/download/updates.json"
 }

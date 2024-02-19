@@ -1,0 +1,27 @@
+{
+	"tempHash": "000BFF0AF533DF97",
+	"tbluHash": "00942F2AC7E03137",
+	"patch": [
+		{
+			"AddPropertyOverrideConnection": {
+				"entity": {
+					"ref": "cafef77f80f5f691",
+					"externalScene": "[assembly:/_pro/scenes/bricks/gameessentialsbase.brick].pc_entitytype"
+				},
+				"propertyName": "m_bIsVisible",
+				"propertyOverride": { "type": "bool", "value": false }
+			}
+		},
+		{
+			"AddPropertyOverrideConnection": {
+				"entity": {
+					"ref": "cafef77f80f5f691",
+					"externalScene": "[assembly:/_pro/scenes/bricks/gameessentialsbase.brick].pc_entitytype"
+				},
+				"propertyName": "m_bIsVisibleInExternalBuild",
+				"propertyOverride": { "type": "bool", "value": false }
+			}
+		}
+	],
+	"patchVersion": 6
+}

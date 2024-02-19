@@ -1,0 +1,8 @@
+common.BaseControl:
+00DE44EF8E598769.UICT,[assembly:/ui/controls/HealthBar.swf?/common.BaseControl.uic].pc_entitytype
+00FB1120C3B2DF8A.UICB,[assembly:/ui/controls/HealthBar.swf?/common.BaseControl.uic].pc_entityblueprint
+
+healthbar.HealthBar:
+005E8CE7C12D96C2.UICT,[assembly:/ui/controls/HealthBar.swf?/healthbar.HealthBar.uic].pc_entitytype
+003F45DD25EEE393.UICB,[assembly:/ui/controls/HealthBar.swf?/healthbar.HealthBar.uic].pc_entityblueprint
+

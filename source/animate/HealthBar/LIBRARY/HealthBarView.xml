@@ -1,0 +1,95 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HealthBarView" itemID="65d30821-0000029c" linkageExportForAS="true" linkageClassName="HealthBarView" lastModified="1708331479">
+  <timeline>
+    <DOMTimeline name="HealthBarView" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#0000FF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HealthBarTextBG" name="HealthBarTextBG">
+                  <matrix>
+                    <Matrix ty="184.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.3" y="13.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMDynamicText name="HealthBarText" width="21.2" height="15.2" autoExpand="true" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="2.7" ty="190.6"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>100</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" lineSpacing="2.55" lineHeight="15.2" size="12.75" bitmapSize="255" face="Neue Haas Grotesk Display Pro 65 Medium*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMShape isDrawingObject="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#323232"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!0 0|532 0!532 0|532 3602!532 3602|0 3602!0 3602|0 0"/>
+                    <Edge cubics="!0 0(;0,0 532,0 532,0q0 0 532 0);"/>
+                    <Edge cubics="!532 0(;532,0 532,3602 532,3602q532 0 532 3602);"/>
+                    <Edge cubics="!532 3602(;532,3602 0,3602 0,3602q532 3602 0 3602);"/>
+                    <Edge cubics="!0 3602(;0,3602 0,0 0,0q0 3602 0 0);"/>
+                  </edges>
+                </DOMShape>
+                <DOMShape isDrawingObject="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!512 20|20 20!20 20|20 3582!20 3582|512 3582!512 3582|512 20!532 0|532 3602!532 3602|0 3602!0 3602|0 0!0 0|532 0"/>
+                    <Edge cubics="!512 20(;512,20 20,20 20,20q512 20 20 20);"/>
+                    <Edge cubics="!20 20(;20,20 20,3582 20,3582q20 20 20 3582);"/>
+                    <Edge cubics="!20 3582(;20,3582 512,3582 512,3582q20 3582 512 3582);"/>
+                    <Edge cubics="!512 3582(;512,3582 512,20 512,20q512 3582 512 20);"/>
+                    <Edge cubics="!532 0(;532,0 532,3602 532,3602q532 0 532 3602);"/>
+                    <Edge cubics="!532 3602(;532,3602 0,3602 0,3602q532 3602 0 3602);"/>
+                    <Edge cubics="!0 3602(;0,3602 0,0 0,0q0 3602 0 0);"/>
+                    <Edge cubics="!0 0(;0,0 532,0 532,0q0 0 532 0);"/>
+                  </edges>
+                </DOMShape>
+                <DOMSymbolInstance libraryItemName="HealthBarInner" name="HealthBarInner" selected="true">
+                  <matrix>
+                    <Matrix a="-1" d="-1" tx="25.55" ty="179"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="12.25" y="88.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMShape isDrawingObject="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#323232"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!491 42|41 42!41 42|41 3561!41 3561|491 3561!491 3561|491 42!511 22|511 3581!511 3581|21 3581!21 3581|21 22!21 22|511 22"/>
+                    <Edge cubics="!491 42(;491,42 41,42 41,42q491 42 41 42);"/>
+                    <Edge cubics="!41 42(;41,42 41,3561 41,3561q41 42 41 3561);"/>
+                    <Edge cubics="!41 3561(;41,3561 491,3561 491,3561q41 3561 491 3561);"/>
+                    <Edge cubics="!491 3561(;491,3561 491,42 491,42q491 3561 491 42);"/>
+                    <Edge cubics="!511 22(;511,22 511,3581 511,3581q511 22 511 3581);"/>
+                    <Edge cubics="!511 3581(;511,3581 21,3581 21,3581q511 3581 21 3581);"/>
+                    <Edge cubics="!21 3581(;21,3581 21,22 21,22q21 3581 21 22);"/>
+                    <Edge cubics="!21 22(;21,22 511,22 511,22q21 22 511 22);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

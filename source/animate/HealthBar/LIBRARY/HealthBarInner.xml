@@ -1,0 +1,33 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HealthBarInner" itemID="65d30858-000002a7" lastModified="1708331480">
+  <timeline>
+    <DOMTimeline name="HealthBarInner" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isDrawingObject="true">
+                  <matrix>
+                    <Matrix tx="-1.05" ty="-1.1"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FA000E"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!21 22S2|511 22!511 22|511 3581!511 3581|21 3581!21 3581|21 22"/>
+                    <Edge cubics="!21 22(;21,22 511,22 511,22q21 22 511 22);"/>
+                    <Edge cubics="!511 22(;511,22 511,3581 511,3581q511 22 511 3581);"/>
+                    <Edge cubics="!511 3581(;511,3581 21,3581 21,3581q511 3581 21 3581);"/>
+                    <Edge cubics="!21 3581(;21,3581 21,22 21,22q21 3581 21 22);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

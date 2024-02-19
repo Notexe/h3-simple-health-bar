@@ -1,0 +1,8 @@
+common.BaseControl:
+0006DA4D5CF92245.ASET,[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/HealthBar.swf?/common.BaseControl.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entitytype
+00E189EF73F8F686.ASEB,[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/HealthBar.swf?/common.BaseControl.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entityblueprint
+
+healthbar.HealthBar:
+005735BCB19C8E01.ASET,[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/HealthBar.swf?/healthbar.HealthBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entitytype
+004CF5791CB5736E.ASEB,[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/HealthBar.swf?/healthbar.HealthBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entityblueprint
+

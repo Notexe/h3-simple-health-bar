@@ -7,6 +7,7 @@ public class HealthBar extends BaseControl {
 
 	private var m_healthBarView:HealthBarView = new HealthBarView();
 	private var m_currentHealth:Number;
+	private var m_isInfected:Boolean = false;
 
 	public function HealthBar() {
 		addChild(m_healthBarView);
@@ -18,13 +19,32 @@ public class HealthBar extends BaseControl {
 		UpdateHealth()
 	}
 
-	public function UpdateHealth():void {
+	public function SetInfected(isInfected:Boolean):void {
+		m_isInfected = isInfected;
+
+		if (isInfected) {
+			m_healthBarView.HealthBarInner.gotoAndPlay(2);
+		} else {
+			m_healthBarView.HealthBarInner.gotoAndPlay(1);
+		}
+
+		UpdateHealthBarColour();
+	}
+
+	private function UpdateHealth():void {
 		var m_maxHealth:Number = 100;
 		m_healthBarView.HealthBarInner.scaleY = m_currentHealth / m_maxHealth;
 		UpdateHealthBarColour();
 	}
 
 	private function UpdateHealthBarColour():void {
+		if (m_isInfected) {
+			var yellow:ColorTransform = new ColorTransform();
+			yellow.color = 0xFFFF00;
+			m_healthBarView.HealthBarInner.transform.colorTransform = yellow;
+			return;
+		}
+
 		var m_maxHealth:Number = 100;
 		var healthRatio:Number = m_currentHealth / m_maxHealth;
 		var m_fullHealthGreen:uint = 0x00BA00;

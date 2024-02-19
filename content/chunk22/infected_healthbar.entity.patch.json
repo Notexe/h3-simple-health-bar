@@ -1,0 +1,49 @@
+{
+	"tempHash": "007DF361D5B7606D",
+	"tbluHash": "003EEA6770CDD15B",
+	"patch": [
+		{
+			"SubEntityOperation": [
+				"56d20ad19e891ab1",
+				{
+					"AddEventConnection": [
+						"OnPlayerRemoved",
+						"SetInfected",
+						{
+							"ref": {
+								"ref": "cafef77f80f5f691",
+								"externalScene": "[assembly:/_pro/scenes/bricks/gameessentialsbase.brick].pc_entitytype"
+							},
+							"value": {
+								"type": "bool",
+								"value": false
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"56d20ad19e891ab1",
+				{
+					"AddEventConnection": [
+						"OnPlayerAdded",
+						"SetInfected",
+						{
+							"ref": {
+								"ref": "cafef77f80f5f691",
+								"externalScene": "[assembly:/_pro/scenes/bricks/gameessentialsbase.brick].pc_entitytype"
+							},
+							"value": {
+								"type": "bool",
+								"value": true
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HealthBarView" itemID="65d30821-0000029c" linkageExportForAS="true" linkageClassName="HealthBarView" lastModified="1708331479">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HealthBarView" itemID="65d30821-0000029c" linkageExportForAS="true" linkageClassName="HealthBarView" lastModified="1708357905">
   <timeline>
     <DOMTimeline name="HealthBarView" layerDepthEnabled="true">
       <layers>
@@ -14,7 +14,7 @@
                     <Point x="13.3" y="13.3"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMDynamicText name="HealthBarText" width="21.2" height="15.2" autoExpand="true" isSelectable="false">
+                <DOMDynamicText name="HealthBarText" left="1.15" width="18.9" height="15.2" autoExpand="true" isSelectable="false">
                   <matrix>
                     <Matrix tx="2.7" ty="190.6"/>
                   </matrix>
@@ -22,7 +22,7 @@
                     <DOMTextRun>
                       <characters>100</characters>
                       <textAttrs>
-                        <DOMTextAttrs alignment="center" aliasText="false" lineSpacing="2.55" lineHeight="15.2" size="12.75" bitmapSize="255" face="Neue Haas Grotesk Display Pro 65 Medium*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs alignment="center" aliasText="false" lineSpacing="2.55" lineHeight="14.2" size="12.75" bitmapSize="255" face="Neue Haas Grotesk Display Pro 65 Medium*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>

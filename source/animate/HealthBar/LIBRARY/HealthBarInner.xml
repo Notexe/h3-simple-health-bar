@@ -1,28 +1,64 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HealthBarInner" itemID="65d30858-000002a7" lastModified="1708331480">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HealthBarInner" itemID="65d30858-000002a7" lastModified="1708366569" lastUniqueIdentifier="2">
   <timeline>
-    <DOMTimeline name="HealthBarInner" layerDepthEnabled="true">
+    <DOMTimeline name="HealthBarInner" currentFrame="120" layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();]]></script>
+              </Actionscript>
               <elements>
-                <DOMShape selected="true" isDrawingObject="true">
+                <DOMSymbolInstance libraryItemName="Tween 1" symbolType="graphic" loop="loop">
                   <matrix>
-                    <Matrix tx="-1.05" ty="-1.1"/>
+                    <Matrix tx="12.4" ty="88.9"/>
                   </matrix>
-                  <fills>
-                    <FillStyle index="1">
-                      <SolidColor color="#FA000E"/>
-                    </FillStyle>
-                  </fills>
-                  <edges>
-                    <Edge fillStyle1="1" edges="!21 22S2|511 22!511 22|511 3581!511 3581|21 3581!21 3581|21 22"/>
-                    <Edge cubics="!21 22(;21,22 511,22 511,22q21 22 511 22);"/>
-                    <Edge cubics="!511 22(;511,22 511,3581 511,3581q511 22 511 3581);"/>
-                    <Edge cubics="!511 3581(;511,3581 21,3581 21,3581q511 3581 21 3581);"/>
-                    <Edge cubics="!21 3581(;21,3581 21,22 21,22q21 3581 21 22);"/>
-                  </edges>
-                </DOMShape>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" duration="59" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Tween 1" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="12.25" ty="88.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="60" duration="60" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Tween 1" symbolType="graphic" centerPoint3DX="12.25" centerPoint3DY="88.95" loop="loop">
+                  <matrix>
+                    <Matrix tx="12.25" ty="88.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+              <frameColor>
+                <Color alphaMultiplier="0"/>
+              </frameColor>
+            </DOMFrame>
+            <DOMFrame index="120" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <Actionscript>
+                <script><![CDATA[gotoAndPlay(2);]]></script>
+              </Actionscript>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Tween 1" selected="true" symbolType="graphic" centerPoint3DX="12.25" centerPoint3DY="88.95" loop="loop">
+                  <matrix>
+                    <Matrix tx="12.25" ty="88.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
               </elements>
             </DOMFrame>
           </frames>

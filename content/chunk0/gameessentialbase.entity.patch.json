@@ -67,6 +67,49 @@
 					}
 				}
 			]
+		},
+		{
+			"AddEntity": [
+				"cafee53c186d2b03",
+				{
+					"parent": "cafeba446945a84b",
+					"name": "EventChannelReceiver_bool",
+					"factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_bool.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_bool.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_bEnabled": { "type": "bool", "value": true },
+						"m_rChannelToken": { "type": "SEntityTemplateReference", "value": "cafe8b035c1e15db" }
+					},
+					"events": { "OnTrue": { "Hide": ["cafe353bf2365fa9"] }, "OnFalse": { "Show": ["cafe353bf2365fa9"] } }
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe8b035c1e15db",
+				{
+					"parent": "cafee53c186d2b03",
+					"name": "TokenID",
+					"factory": "[modules:/ztokenidentity.class].pc_entitytype",
+					"blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+					"properties": { "m_sName": { "type": "ZString", "value": "EventChannel_Notex_HealthBar" } }
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe353bf2365fa9",
+				{
+					"parent": "cafeba446945a84b",
+					"name": "UIControlVisibilityController",
+					"factory": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entitytype",
+					"blueprint": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entityblueprint",
+					"properties": {
+						"m_fFadeTime": { "type": "float32", "value": 0 },
+						"m_pTargetControl": { "type": "SEntityTemplateReference", "value": "cafef77f80f5f691" }
+					}
+				}
+			]
 		}
 	],
 	"patchVersion": 6

@@ -43,6 +43,75 @@
 					]
 				}
 			]
+		},
+		{
+			"AddEntity": [
+				"feed2b6581780bf8",
+				{
+					"parent": "7dc77d48e899bd88",
+					"name": "Poll 47 Infected",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rValueEntity": {
+							"type": "SEntityTemplateReference",
+							"value": "1b1ee64105fd78d0"
+						}
+					},
+					"events": {
+						"PollTrue": {
+							"SetInfected": [
+								{
+									"ref": {
+										"ref": "cafef77f80f5f691",
+										"externalScene": "[assembly:/_pro/scenes/bricks/gameessentialsbase.brick].pc_entitytype"
+									},
+									"value": {
+										"type": "bool",
+										"value": true
+									}
+								}
+							]
+						},
+						"PollFalse": {
+							"SetInfected": [
+								{
+									"ref": {
+										"ref": "cafef77f80f5f691",
+										"externalScene": "[assembly:/_pro/scenes/bricks/gameessentialsbase.brick].pc_entitytype"
+									},
+									"value": {
+										"type": "bool",
+										"value": false
+									}
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed3ea49293a24a",
+				{
+					"parent": "7dc77d48e899bd88",
+					"name": "GameEventListener",
+					"factory": "[modules:/zgameeventlistenerentity.class].pc_entitytype",
+					"blueprint": "[modules:/zgameeventlistenerentity.class].pc_entityblueprint",
+					"properties": {
+						"m_eEvent": {
+							"type": "EGameEventType",
+							"value": "GET_SavegameRestored"
+						}
+					},
+					"events": {
+						"EventOccurred": {
+							"Poll": ["feed2b6581780bf8"]
+						}
+					}
+				}
+			]
 		}
 	],
 	"patchVersion": 6

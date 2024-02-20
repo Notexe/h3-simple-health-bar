@@ -1,6 +1,8 @@
 package healthbar {
 import common.BaseControl;
 
+import flash.events.Event;
+
 import flash.geom.ColorTransform;
 
 public class HealthBar extends BaseControl {
@@ -10,8 +12,10 @@ public class HealthBar extends BaseControl {
 	private var m_isInfected:Boolean = false;
 	private var m_lowHealthRed:uint;
 	private var m_fullHealthGreen:uint;
+	private var m_DebugMode:Boolean;
 
 	public function HealthBar() {
+		m_healthBarView.DebugText.visible = false;
 		addChild(m_healthBarView);
 	}
 
@@ -116,6 +120,30 @@ public class HealthBar extends BaseControl {
 
 	public function set Debug(health:Number):void {
 		SetHealth(health);
+	}
+
+	public function set DebugMode(bool:Boolean):void {
+		if (bool) {
+			addEventListener(Event.ENTER_FRAME, UpdateDebugText);
+			m_healthBarView.DebugText.visible = true;
+		}
+		else {
+			removeEventListener(Event.ENTER_FRAME, UpdateDebugText);
+			m_healthBarView.DebugText.visible = false;
+		}
+	}
+
+	private function UpdateDebugText(e:Event):void {
+		var debugInfo:String = "";
+		debugInfo += "Current Health: " + Math.round(m_currentHealth) + "\n";
+		debugInfo += "Is Infected: " + m_isInfected + "\n";
+		debugInfo += "Low Health Red Colour: #" + m_lowHealthRed.toString(16) + "\n";
+		debugInfo += "Full Health Green Colour: #" + m_fullHealthGreen.toString(16) + "\n";
+
+		m_healthBarView.DebugText.text = debugInfo;
+		m_healthBarView.DebugText.visible = true;
+		m_healthBarView.DebugText.wordWrap = true;
+		m_healthBarView.DebugText.multiline = true;
 	}
 
 }

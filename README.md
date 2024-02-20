@@ -6,4 +6,4 @@ Adds a simple health bar to the left of the minimap.
 
 ---
 
-`Notex.SimpleHealthBar` v1.2.1, by Notex. This README was automatically generated from the mod's manifest.
+`Notex.SimpleHealthBar` v1.3.0, by Notex. This README was automatically generated from the mod's manifest.

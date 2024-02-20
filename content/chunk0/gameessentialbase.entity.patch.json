@@ -48,7 +48,17 @@
 							"value": "E_LAYOUT_MODE_Proportional_Scale_MaintainAspect"
 						},
 						"m_vSize": { "type": "SVector2", "value": { "x": 100, "y": 100 } },
-						"m_bIsVisible": { "type": "bool", "value": true }
+						"m_bIsVisible": { "type": "bool", "value": true },
+						"m_fAlpha": { "type": "float32", "value": 100.0 },
+						"Debug": { "type": "uint32", "value": 100 },
+						"DebugMode": { "type": "bool", "value": false },
+						"HealthBarTextColour": { "type": "ZString", "value": "#FFFFFF" },
+						"HealthBarTextBGColour": { "type": "ZString", "value": "#323232" },
+						"HealthBarTextBorderColour": { "type": "ZString", "value": "#000000" },
+						"HealthBarBGColour": { "type": "ZString", "value": "#323232" },
+						"HealthBarBorderColour": { "type": "ZString", "value": "#000000" },
+						"LowHealthRedColour": { "type": "ZString", "value": "#FA0000" },
+						"FullHealthGreenColour": { "type": "ZString", "value": "#00BA00" }
 					}
 				}
 			]

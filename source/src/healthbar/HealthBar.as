@@ -11,6 +11,7 @@ public class HealthBar extends BaseControl {
 	private var m_currentHealth:Number;
 	private var m_isInfected:Boolean = false;
 	private var m_lowHealthColour:uint;
+	private var m_mediumHealthColour:uint;
 	private var m_fullHealthColour:uint;
 	private var m_infectedColour:uint;
 	private var m_DebugMode:Boolean;
@@ -54,11 +55,25 @@ public class HealthBar extends BaseControl {
 
 		var m_maxHealth:Number = 100;
 		var healthRatio:Number = m_currentHealth / m_maxHealth;
-		var red:uint = interpolate((m_lowHealthColour >> 16) & 0xFF, (m_fullHealthColour >> 16) & 0xFF, healthRatio);
-		var green:uint = interpolate((m_lowHealthColour >> 8) & 0xFF, (m_fullHealthColour >> 8) & 0xFF, healthRatio);
-		var blue:uint = interpolate(m_lowHealthColour & 0xFF, m_fullHealthColour & 0xFF, healthRatio);
+
+		var mediumHealthRatio:Number = 0.5;
+
+		var low:uint, medium:uint, full:uint;
+
+		if (healthRatio <= mediumHealthRatio) {
+			var lowToMiddleRatio:Number = healthRatio / mediumHealthRatio;
+			low = interpolate((m_lowHealthColour >> 16) & 0xFF, (m_mediumHealthColour >> 16) & 0xFF, lowToMiddleRatio);
+			full = interpolate((m_lowHealthColour >> 8) & 0xFF, (m_mediumHealthColour >> 8) & 0xFF, lowToMiddleRatio);
+			medium = interpolate(m_lowHealthColour & 0xFF, m_mediumHealthColour & 0xFF, lowToMiddleRatio);
+		} else {
+			var middleToFullRatio:Number = (healthRatio - mediumHealthRatio) / (1 - mediumHealthRatio);
+			low = interpolate((m_mediumHealthColour >> 16) & 0xFF, (m_fullHealthColour >> 16) & 0xFF, middleToFullRatio);
+			full = interpolate((m_mediumHealthColour >> 8) & 0xFF, (m_fullHealthColour >> 8) & 0xFF, middleToFullRatio);
+			medium = interpolate(m_mediumHealthColour & 0xFF, m_fullHealthColour & 0xFF, middleToFullRatio);
+		}
+
 		var colorTransform:ColorTransform = new ColorTransform();
-		colorTransform.color = (red << 16) | (green << 8) | blue;
+		colorTransform.color = (low << 16) | (full << 8) | medium;
 		m_healthBarView.HealthBarInner.transform.colorTransform = colorTransform;
 	}
 

@@ -19,14 +19,33 @@
 				}
 			]
 		},
+		{ "SubEntityOperation": ["d63ac16cd1c66f50", { "AddEventConnection": ["Out02", "Hide", "cafef4e298a79304"] }] },
 		{ "SubEntityOperation": ["ecdfd17726bd53ca", { "AddEventConnection": ["OnTrue", "Show", "cafe0141885e38a0"] }] },
 		{ "SubEntityOperation": ["ecdfd17726bd53ca", { "AddEventConnection": ["OnFalse", "Hide", "cafe0141885e38a0"] }] },
+		{ "SubEntityOperation": ["43f4c2bb1b13db7b", { "AddEventConnection": ["Out02", "Show", "cafef4e298a79304"] }] },
 		{ "SubEntityOperation": ["34f439ac06f0f3ec", { "AddEventConnection": ["OnTrue", "Show", "cafe353bf2365fa9"] }] },
 		{ "SubEntityOperation": ["34f439ac06f0f3ec", { "AddEventConnection": ["OnFalse", "Hide", "cafe353bf2365fa9"] }] },
 		{
 			"SubEntityOperation": [
 				"69be349a738c7ea9",
 				{ "AddEventConnection": ["EventReceived", "SetVisible", "cafe353bf2365fa9"] }
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"ff4672d7da2e8b02",
+				{ "AddProperty": ["HealthBar", { "type": "SEntityTemplateReference", "value": "cafef4e298a79304" }] }
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"ff4672d7da2e8b02",
+				{
+					"AddPropertyAliasConnection": [
+						"HealthBar",
+						{ "originalProperty": "m_pTargetControl", "originalEntity": "cafe353bf2365fa9" }
+					]
+				}
 			]
 		},
 		{
@@ -151,6 +170,18 @@
 						"m_fFadeTime": { "type": "float32", "value": 1 },
 						"m_pTargetControl": { "type": "SEntityTemplateReference", "value": "cafef77f80f5f691" }
 					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafef4e298a79304",
+				{
+					"parent": "ff4672d7da2e8b02",
+					"name": "HealthBar",
+					"factory": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entitytype",
+					"blueprint": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entityblueprint",
+					"properties": { "m_pTargetControl": { "type": "SEntityTemplateReference", "value": "cafef77f80f5f691" } }
 				}
 			]
 		}

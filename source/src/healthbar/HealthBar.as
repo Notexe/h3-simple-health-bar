@@ -129,6 +129,11 @@ public class HealthBar extends BaseControl {
 		m_lowHealthColour = colourValue;
 	}
 
+	public function set MediumHealthColour(colour:String):void {
+		var colourValue:uint = parseRGB(colour);
+		m_mediumHealthColour = colourValue;
+	}
+
 	public function set FullHealthColour(colour:String):void {
 		var colourValue:uint = parseRGB(colour);
 		m_fullHealthColour = colourValue;

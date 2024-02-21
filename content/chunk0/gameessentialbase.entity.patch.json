@@ -57,8 +57,10 @@
 						"HealthBarTextBorderColour": { "type": "ZString", "value": "#000000" },
 						"HealthBarBGColour": { "type": "ZString", "value": "#323232" },
 						"HealthBarBorderColour": { "type": "ZString", "value": "#000000" },
-						"LowHealthRedColour": { "type": "ZString", "value": "#FA0000" },
-						"FullHealthGreenColour": { "type": "ZString", "value": "#00BA00" }
+						"LowHealthColour": { "type": "ZString", "value": "#FA0000" },
+						"MediumHealthColour": { "type": "ZString", "value": "#FFFF00" },
+						"FullHealthColour": { "type": "ZString", "value": "#00BA00" },
+						"InfectedColour": { "type": "ZString", "value": "#FFFF00" }
 					}
 				}
 			]

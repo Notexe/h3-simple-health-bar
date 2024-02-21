@@ -4,6 +4,12 @@
 	"patch": [
 		{
 			"SubEntityOperation": [
+				"8e16e03dab8d2cef",
+				{ "AddEventConnection": ["EventReceived", "SetVisible", "cafe0141885e38a0"] }
+			]
+		},
+		{
+			"SubEntityOperation": [
 				"db9f74950fec79f8",
 				{
 					"PatchArrayPropertyValue": [
@@ -11,6 +17,16 @@
 						[{ "AddItemAfter": ["0c74ae87029bd724", "cafef77f80f5f691"] }]
 					]
 				}
+			]
+		},
+		{ "SubEntityOperation": ["ecdfd17726bd53ca", { "AddEventConnection": ["OnTrue", "Show", "cafe0141885e38a0"] }] },
+		{ "SubEntityOperation": ["ecdfd17726bd53ca", { "AddEventConnection": ["OnFalse", "Hide", "cafe0141885e38a0"] }] },
+		{ "SubEntityOperation": ["34f439ac06f0f3ec", { "AddEventConnection": ["OnTrue", "Show", "cafe353bf2365fa9"] }] },
+		{ "SubEntityOperation": ["34f439ac06f0f3ec", { "AddEventConnection": ["OnFalse", "Hide", "cafe353bf2365fa9"] }] },
+		{
+			"SubEntityOperation": [
+				"69be349a738c7ea9",
+				{ "AddEventConnection": ["EventReceived", "SetVisible", "cafe353bf2365fa9"] }
 			]
 		},
 		{
@@ -113,11 +129,26 @@
 				"cafe353bf2365fa9",
 				{
 					"parent": "cafeba446945a84b",
-					"name": "UIControlVisibilityController",
+					"name": "HealthBarVisibilityController_Instant",
 					"factory": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entitytype",
 					"blueprint": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entityblueprint",
 					"properties": {
 						"m_fFadeTime": { "type": "float32", "value": 0 },
+						"m_pTargetControl": { "type": "SEntityTemplateReference", "value": "cafef77f80f5f691" }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe0141885e38a0",
+				{
+					"parent": "cafeba446945a84b",
+					"name": "HealthBarVisibilityController_Fade",
+					"factory": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entitytype",
+					"blueprint": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entityblueprint",
+					"properties": {
+						"m_fFadeTime": { "type": "float32", "value": 1 },
 						"m_pTargetControl": { "type": "SEntityTemplateReference", "value": "cafef77f80f5f691" }
 					}
 				}

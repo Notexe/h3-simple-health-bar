@@ -10,8 +10,9 @@ public class HealthBar extends BaseControl {
 	private var m_healthBarView:HealthBarView = new HealthBarView();
 	private var m_currentHealth:Number;
 	private var m_isInfected:Boolean = false;
-	private var m_lowHealthRed:uint;
-	private var m_fullHealthGreen:uint;
+	private var m_lowHealthColour:uint;
+	private var m_fullHealthColour:uint;
+	private var m_infectedColour:uint;
 	private var m_DebugMode:Boolean;
 
 	public function HealthBar() {
@@ -46,16 +47,16 @@ public class HealthBar extends BaseControl {
 	private function UpdateHealthBarColour():void {
 		if (m_isInfected) {
 			var yellow:ColorTransform = new ColorTransform();
-			yellow.color = 0xFFFF00;
+			yellow.color = m_infectedColour;
 			m_healthBarView.HealthBarInner.transform.colorTransform = yellow;
 			return;
 		}
 
 		var m_maxHealth:Number = 100;
 		var healthRatio:Number = m_currentHealth / m_maxHealth;
-		var red:uint = interpolate((m_lowHealthRed >> 16) & 0xFF, (m_fullHealthGreen >> 16) & 0xFF, healthRatio);
-		var green:uint = interpolate((m_lowHealthRed >> 8) & 0xFF, (m_fullHealthGreen >> 8) & 0xFF, healthRatio);
-		var blue:uint = interpolate(m_lowHealthRed & 0xFF, m_fullHealthGreen & 0xFF, healthRatio);
+		var red:uint = interpolate((m_lowHealthColour >> 16) & 0xFF, (m_fullHealthColour >> 16) & 0xFF, healthRatio);
+		var green:uint = interpolate((m_lowHealthColour >> 8) & 0xFF, (m_fullHealthColour >> 8) & 0xFF, healthRatio);
+		var blue:uint = interpolate(m_lowHealthColour & 0xFF, m_fullHealthColour & 0xFF, healthRatio);
 		var colorTransform:ColorTransform = new ColorTransform();
 		colorTransform.color = (red << 16) | (green << 8) | blue;
 		m_healthBarView.HealthBarInner.transform.colorTransform = colorTransform;
@@ -65,57 +66,62 @@ public class HealthBar extends BaseControl {
 		return start + (end - start) * ratio;
 	}
 
-	private function parseRGBA(rgba:String):uint {
+	private function parseRGB(rgba:String):uint {
 		if (rgba.charAt(0) == "#") {
 			rgba = rgba.substring(1);
 		}
 
-		var colourValue:uint = uint("0x" + rgba.substr(0, 6));
+		var colourValue:uint = parseInt(rgba.substr(0, 6), 16);
 
 		return colourValue;
 	}
 
 	public function set HealthBarTextColour(colour:String):void {
-		var colourValue:uint = parseRGBA(colour);
+		var colourValue:uint = parseRGB(colour);
 		m_healthBarView.HealthBarText.textColor = colourValue;
 	}
 
 	public function set HealthBarTextBGColour(colour:String):void {
-		var colourValue:uint = parseRGBA(colour);
+		var colourValue:uint = parseRGB(colour);
 		var colorTransform:ColorTransform = new ColorTransform();
 		colorTransform.color = colourValue;
 		m_healthBarView.HealthBarTextBG.transform.colorTransform = colorTransform;
 	}
 
 	public function set HealthBarTextBorderColour(colour:String):void {
-		var colourValue:uint = parseRGBA(colour);
+		var colourValue:uint = parseRGB(colour);
 		var colorTransform:ColorTransform = new ColorTransform();
 		colorTransform.color = colourValue;
 		m_healthBarView.HealthBarTextBorder.transform.colorTransform = colorTransform;
 	}
 
 	public function set HealthBarBGColour(colour:String):void {
-		var colourValue:uint = parseRGBA(colour);
+		var colourValue:uint = parseRGB(colour);
 		var colorTransform:ColorTransform = new ColorTransform();
 		colorTransform.color = colourValue;
 		m_healthBarView.HealthBarBG.transform.colorTransform = colorTransform;
 	}
 
 	public function set HealthBarBorderColour(colour:String):void {
-		var colourValue:uint = parseRGBA(colour);
+		var colourValue:uint = parseRGB(colour);
 		var colorTransform:ColorTransform = new ColorTransform();
 		colorTransform.color = colourValue;
 		m_healthBarView.HealthBarBorder.transform.colorTransform = colorTransform;
 	}
 
-	public function set LowHealthRedColour(colour:String):void {
-		var colourValue:uint = parseRGBA(colour);
-		m_lowHealthRed = colourValue;
+	public function set LowHealthColour(colour:String):void {
+		var colourValue:uint = parseRGB(colour);
+		m_lowHealthColour = colourValue;
 	}
 
-	public function set FullHealthGreenColour(colour:String):void {
-		var colourValue:uint = parseRGBA(colour);
-		m_fullHealthGreen = colourValue;
+	public function set FullHealthColour(colour:String):void {
+		var colourValue:uint = parseRGB(colour);
+		m_fullHealthColour = colourValue;
+	}
+
+	public function set InfectedColour(colour:String):void {
+		var colourValue:uint = parseRGB(colour);
+		m_infectedColour = colourValue;
 	}
 
 	public function set Debug(health:Number):void {
@@ -137,8 +143,8 @@ public class HealthBar extends BaseControl {
 		var debugInfo:String = "";
 		debugInfo += "Current Health: " + Math.round(m_currentHealth) + "\n";
 		debugInfo += "Is Infected: " + m_isInfected + "\n";
-		debugInfo += "Low Health Red Colour: #" + m_lowHealthRed.toString(16) + "\n";
-		debugInfo += "Full Health Green Colour: #" + m_fullHealthGreen.toString(16) + "\n";
+		debugInfo += "Low Health Red Colour: #" + m_lowHealthColour.toString(16) + "\n";
+		debugInfo += "Full Health Green Colour: #" + m_fullHealthColour.toString(16) + "\n";
 
 		m_healthBarView.DebugText.text = debugInfo;
 		m_healthBarView.DebugText.visible = true;

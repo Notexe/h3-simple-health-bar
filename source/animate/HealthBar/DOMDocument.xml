@@ -1,4 +1,4 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="500" height="375" frameRate="60" currentTimeline="1" xflVersion="23.0" creatorInfo="Adobe Animate" platform="Windows" versionInfo="Saved by Animate Windows 24.0 build 305" majorVersion="24" buildNumber="305" guidesSnapTo="false" bitmapSnap="false" snapAlign="false" objectsSnapTo="false" viewAngle3D="50.6510299754819" vanishingPoint3DX="250" vanishingPoint3DY="187.5" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" filetypeGUID="DD0DDBBF-5BEF-45B2-9F24-A3048D2A676F" fileGUID="A17DADE9A43CAC49BE53029565C2AE52">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="500" height="375" frameRate="60" currentTimeline="1" xflVersion="23.0" creatorInfo="Adobe Animate" platform="Windows" versionInfo="Saved by Animate Windows 24.0 build 305" majorVersion="24" buildNumber="305" guidesSnapTo="false" pixelSnap="true" bitmapSnap="false" objectsSnapTo="false" viewAngle3D="50.6510299754819" vanishingPoint3DX="250" vanishingPoint3DY="187.5" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" filetypeGUID="DD0DDBBF-5BEF-45B2-9F24-A3048D2A676F" fileGUID="A17DADE9A43CAC49BE53029565C2AE52">
      <folders>
           <DOMFolderItem name="_Fonts" itemID="65cf29bd-00001637"/>
      </folders>
@@ -9,14 +9,16 @@
           <DOMFontItem name="_Fonts/Neue Haas Grotesk Display Pro 35 Extra Light" itemID="65c8de86-0000013b" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageBaseClass="flash.text.Font" linkageClassName="$light" font="NHaasGroteskDSPro-35XLt" size="0" id="4" sourceLastImported="1707662982" embeddedCharacters=" !&quot;#$%&amp;&apos;()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžƒǼǽǾǿȘșȚțȷˆ˜ –—‘’‚“”„†‡•…‰′″‹›⁄€ℓ™Ω℮⅓⅔⅛⅜⅝⅞"/>
           <DOMFontItem name="_Fonts/Neue Haas Grotesk Display Pro 65 Medium" itemID="65c8de86-00000139" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageBaseClass="flash.text.Font" linkageClassName="$medium" font="NHaasGroteskDSPro-65Md" size="0" id="5" sourceLastImported="1707662982" embeddedCharacters=" !&quot;#$%&amp;&apos;()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžƒǼǽǾǿȘșȚțȷˆ˜ –—‘’‚“”„†‡•…‰′″‹›⁄€ℓ™Ω℮⅓⅔⅛⅜⅝⅞"/>
      </fonts>
+     <media/>
      <symbols>
-          <Include href="HealthBarBG.xml" loadImmediate="false" itemID="65d42124-00000136" lastModified="1708407454"/>
-          <Include href="HealthBarBorder.xml" loadImmediate="false" itemID="65d4212b-0000013b" lastModified="1708407440"/>
-          <Include href="HealthBarInner.xml" loadImmediate="false" itemID="65d30858-000002a7" lastModified="1708407445"/>
-          <Include href="HealthBarTextBG.xml" loadImmediate="false" itemID="65d42326-00000140" lastModified="1708407447"/>
-          <Include href="HealthBarTextBorder.xml" loadImmediate="false" itemID="65d4232f-00000145" lastModified="1708407447"/>
-          <Include href="HealthBarView.xml" itemID="65d30821-0000029c" lastModified="1708410947"/>
-          <Include href="Tween 1.xml" itemIcon="1" loadImmediate="false" itemID="65d37a5c-0000013a" lastModified="1708358236"/>
+          <Include href="DebugTextView.xml" itemID="65d6c03e-00000159" lastModified="1708572898"/>
+          <Include href="HealthBarBG.xml" loadImmediate="false" itemID="65d42124-00000136" lastModified="1708572487"/>
+          <Include href="HealthBarBorder.xml" loadImmediate="false" itemID="65d4212b-0000013b" lastModified="1708572493"/>
+          <Include href="HealthBarInner.xml" loadImmediate="false" itemID="65d30858-000002a7" lastModified="1708573219"/>
+          <Include href="HealthBarTextBG.xml" loadImmediate="false" itemID="65d42326-00000140" lastModified="1708572519"/>
+          <Include href="HealthBarTextBorder.xml" loadImmediate="false" itemID="65d4232f-00000145" lastModified="1708572510"/>
+          <Include href="HealthBarView.xml" itemID="65d30821-0000029c" lastModified="1708573194"/>
+          <Include href="Tween 1.xml" itemIcon="1" loadImmediate="false" itemID="65d37a5c-0000013a" lastModified="1708573221"/>
      </symbols>
      <timelines>
           <DOMTimeline name="Scene 1" layerDepthEnabled="true">
@@ -34,6 +36,15 @@
      <scripts/>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="5434" publishTime="1708573199"/>
+          <PublishItem publishSize="5434" publishTime="1708573076"/>
+          <PublishItem publishSize="5437" publishTime="1708572901"/>
+          <PublishItem publishSize="5429" publishTime="1708572849"/>
+          <PublishItem publishSize="5188" publishTime="1708572704"/>
+          <PublishItem publishSize="5392" publishTime="1708572424"/>
+          <PublishItem publishSize="5421" publishTime="1708572231"/>
+          <PublishItem publishSize="5409" publishTime="1708570890"/>
+          <PublishItem publishSize="5419" publishTime="1708570495"/>
           <PublishItem publishSize="5503" publishTime="1708409373"/>
           <PublishItem publishSize="5508" publishTime="1708409360"/>
           <PublishItem publishSize="5508" publishTime="1708407456"/>
@@ -45,14 +56,5 @@
           <PublishItem publishSize="5403" publishTime="1708403179"/>
           <PublishItem publishSize="5403" publishTime="1708402522"/>
           <PublishItem publishSize="5335" publishTime="1708401640"/>
-          <PublishItem publishSize="5335" publishTime="1708401635"/>
-          <PublishItem publishSize="5333" publishTime="1708401555"/>
-          <PublishItem publishSize="5333" publishTime="1708401542"/>
-          <PublishItem publishSize="5335" publishTime="1708401478"/>
-          <PublishItem publishSize="902" publishTime="1708329666"/>
-          <PublishItem publishSize="902" publishTime="1708329174"/>
-          <PublishItem publishSize="895" publishTime="1708329060"/>
-          <PublishItem publishSize="878" publishTime="1708328864"/>
-          <PublishItem publishSize="857" publishTime="1708328856"/>
      </publishHistory>
 </DOMDocument>

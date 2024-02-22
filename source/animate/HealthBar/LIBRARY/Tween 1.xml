@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Tween 1" itemID="65d37a5c-0000013a" symbolType="graphic" lastModified="1708358236">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Tween 1" itemID="65d37a5c-0000013a" symbolType="graphic" lastModified="1708573221">
   <timeline>
     <DOMTimeline name="Tween 1" layerDepthEnabled="true">
       <layers>
@@ -6,9 +6,9 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMShape selected="true" isDrawingObject="true">
+                <DOMShape isDrawingObject="true">
                   <matrix>
-                    <Matrix tx="-13.3" ty="-90.05"/>
+                    <Matrix a="0.898788452148438" d="0.989242553710938" tx="-0.95" ty="-1.1"/>
                   </matrix>
                   <fills>
                     <FillStyle index="1">

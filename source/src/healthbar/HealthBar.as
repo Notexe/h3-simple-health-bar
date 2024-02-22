@@ -5,6 +5,8 @@ import flash.events.Event;
 
 import flash.geom.ColorTransform;
 
+import scaleform.gfx.Extensions;
+
 public class HealthBar extends BaseControl {
 
 	private var m_healthBarView:HealthBarView = new HealthBarView();
@@ -17,7 +19,7 @@ public class HealthBar extends BaseControl {
 	private var m_DebugMode:Boolean;
 
 	public function HealthBar() {
-		m_healthBarView.DebugText.visible = false;
+		Extensions.setEdgeAAMode(m_healthBarView, Extensions.EDGEAA_OFF)
 		addChild(m_healthBarView);
 	}
 

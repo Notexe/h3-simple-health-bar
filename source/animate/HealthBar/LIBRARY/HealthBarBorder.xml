@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HealthBarBorder" itemID="65d4212b-0000013b" lastModified="1708407440">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HealthBarBorder" itemID="65d4212b-0000013b" lastModified="1708572493">
   <timeline>
     <DOMTimeline name="HealthBarBorder" layerDepthEnabled="true">
       <layers>
@@ -6,7 +6,10 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMShape isDrawingObject="true">
+                <DOMShape selected="true" isDrawingObject="true">
+                  <matrix>
+                    <Matrix a="0.977447509765625" d="0.99945068359375"/>
+                  </matrix>
                   <fills>
                     <FillStyle index="1">
                       <SolidColor/>

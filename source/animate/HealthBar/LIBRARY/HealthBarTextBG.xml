@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HealthBarTextBG" itemID="65d42326-00000140" lastModified="1708407447">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HealthBarTextBG" itemID="65d42326-00000140" lastModified="1708572519">
   <timeline>
     <DOMTimeline name="HealthBarTextBG" layerDepthEnabled="true">
       <layers>
@@ -13,11 +13,11 @@
                     </FillStyle>
                   </fills>
                   <edges>
-                    <Edge fillStyle0="1" edges="!492 0|0 0!0 0|0 493!0 493|492 493!492 493|492 0"/>
-                    <Edge cubics="!492 0(;492,0 0,0 0,0q492 0 0 0);"/>
-                    <Edge cubics="!0 0(;0,0 0,493 0,493q0 0 0 493);"/>
-                    <Edge cubics="!0 493(;0,493 492,493 492,493q0 493 492 493);"/>
-                    <Edge cubics="!492 493(;492,493 492,0 492,0q492 493 492 0);"/>
+                    <Edge fillStyle0="1" edges="!520 0|0 0!0 0|0 520!0 520|520 520!520 520|520 0"/>
+                    <Edge cubics="!520 0(;520,0 0,0 0,0q520 0 0 0);"/>
+                    <Edge cubics="!0 0(;0,0 0,520 0,520q0 0 0 520);"/>
+                    <Edge cubics="!0 520(;0,520 520,520 520,520q0 520 520 520);"/>
+                    <Edge cubics="!520 520(;520,520 520,0 520,0q520 520 520 0);"/>
                   </edges>
                 </DOMShape>
               </elements>

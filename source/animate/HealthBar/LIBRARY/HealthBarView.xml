@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HealthBarView" itemID="65d30821-0000029c" linkageExportForAS="true" linkageClassName="HealthBarView" lastModified="1708573194">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HealthBarView" itemID="65d30821-0000029c" linkageExportForAS="true" linkageClassName="HealthBarView" lastModified="1708575031">
   <timeline>
     <DOMTimeline name="HealthBarView" layerDepthEnabled="true">
       <layers>
@@ -18,7 +18,7 @@
                 </DOMSymbolInstance>
                 <DOMSymbolInstance libraryItemName="HealthBarInner" name="HealthBarInner" selected="true">
                   <matrix>
-                    <Matrix tx="2" ty="2"/>
+                    <Matrix a="-1" d="-1" tx="24" ty="178"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="11" y="88"/>

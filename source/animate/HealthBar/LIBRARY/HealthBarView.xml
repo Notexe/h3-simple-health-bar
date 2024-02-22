@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HealthBarView" itemID="65d30821-0000029c" linkageExportForAS="true" linkageClassName="HealthBarView" lastModified="1708575031">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HealthBarView" itemID="65d30821-0000029c" linkageExportForAS="true" linkageClassName="HealthBarView" lastModified="1708583682">
   <timeline>
     <DOMTimeline name="HealthBarView" layerDepthEnabled="true">
       <layers>
@@ -16,7 +16,7 @@
                     <Point x="13" y="90"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="HealthBarInner" name="HealthBarInner" selected="true">
+                <DOMSymbolInstance libraryItemName="HealthBarInner" name="HealthBarInner">
                   <matrix>
                     <Matrix a="-1" d="-1" tx="24" ty="178"/>
                   </matrix>
@@ -32,19 +32,6 @@
                     <Point x="13" y="13"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMDynamicText name="HealthBarText" fontRenderingMode="standard" width="20.3" height="15.2" isSelectable="false">
-                  <matrix>
-                    <Matrix a="1.06898498535156" tx="2.15" ty="189"/>
-                  </matrix>
-                  <textRuns>
-                    <DOMTextRun>
-                      <characters>100</characters>
-                      <textAttrs>
-                        <DOMTextAttrs alignment="center" aliasText="false" lineSpacing="2.55" lineHeight="14.3" bitmapSize="240" face="Neue Haas Grotesk Display Pro 65 Medium*" fillColor="#FFFFFF"/>
-                      </textAttrs>
-                    </DOMTextRun>
-                  </textRuns>
-                </DOMDynamicText>
                 <DOMSymbolInstance libraryItemName="HealthBarTextBorder" name="HealthBarTextBorder">
                   <matrix>
                     <Matrix ty="184"/>
@@ -53,6 +40,19 @@
                     <Point x="13" y="13"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
+                <DOMDynamicText name="HealthBarText" fontRenderingMode="standard" width="100" height="16.7" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="-37" ty="188.65"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>100</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" lineSpacing="2.55" lineHeight="16.7" size="14" bitmapSize="280" face="Neue Haas Grotesk Display Pro 65 Medium*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
               </elements>
             </DOMFrame>
           </frames>

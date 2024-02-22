@@ -73,7 +73,7 @@
 							"value": { "resource": "[assembly:/ui/controls/HealthBar.swf].pc_swf", "flag": "5F" }
 						},
 						"m_sClassName": { "type": "ZString", "value": "healthbar.HealthBar" },
-						"m_vPositionOffset": { "type": "SVector3", "value": { "x": 14, "y": 829, "z": 0 } },
+						"m_vPositionOffset": { "type": "SVector3", "value": { "x": 15, "y": 829, "z": 0 } },
 						"m_eAlignmentType": {
 							"type": "ZUIControlLayoutLegacyAspect.EAlignmentType",
 							"value": "E_ALIGNMENT_TYPE_BottomLeft"
@@ -95,7 +95,9 @@
 						"LowHealthColour": { "type": "ZString", "value": "#FA0000" },
 						"MediumHealthColour": { "type": "ZString", "value": "#FFFF00" },
 						"FullHealthColour": { "type": "ZString", "value": "#00BA00" },
-						"InfectedColour": { "type": "ZString", "value": "#FFFF00" }
+						"InfectedColour": { "type": "ZString", "value": "#FFFF00" },
+						"Height": { "type": "float32", "value": 1 },
+						"Width": { "type": "float32", "value": 1 }
 					}
 				}
 			]

@@ -10,6 +10,7 @@ import scaleform.gfx.Extensions;
 public class HealthBar extends BaseControl {
 
 	private var m_healthBarView:HealthBarView = new HealthBarView();
+	private var m_debugTextView:DebugTextView = new DebugTextView();
 	private var m_currentHealth:Number;
 	private var m_isInfected:Boolean = false;
 	private var m_lowHealthColour:uint;
@@ -19,8 +20,10 @@ public class HealthBar extends BaseControl {
 	private var m_DebugMode:Boolean;
 
 	public function HealthBar() {
+		m_debugTextView.DebugText.visible = false;
 		Extensions.setEdgeAAMode(m_healthBarView, Extensions.EDGEAA_OFF)
 		addChild(m_healthBarView);
+		addChild(m_debugTextView);
 	}
 
 	public function SetHealth(health:Number):void {
@@ -159,6 +162,14 @@ public class HealthBar extends BaseControl {
 			removeEventListener(Event.ENTER_FRAME, UpdateDebugText);
 			m_healthBarView.DebugText.visible = false;
 		}
+	}
+
+	public function set Height(number:Number):void {
+		m_healthBarView.scaleY = number;
+	}
+
+	public function set Width(number:Number):void {
+		m_healthBarView.scaleX = number;
 	}
 
 	private function UpdateDebugText(e:Event):void {

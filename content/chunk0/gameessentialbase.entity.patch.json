@@ -214,6 +214,19 @@
 					"events": { "Data": { "SecondaryColours": ["cafef77f80f5f691"] } }
 				}
 			]
+		},
+		{
+			"AddEntity": [
+				"cafe80cf93bca7cf",
+				{
+					"parent": "cafeba446945a84b",
+					"name": "GameEventListener",
+					"factory": "[modules:/zgameeventlistenerentity.class].pc_entitytype",
+					"blueprint": "[modules:/zgameeventlistenerentity.class].pc_entityblueprint",
+					"properties": { "m_eEvent": { "type": "EGameEventType", "value": "GET_SavegameRestored" } },
+					"events": { "EventOccurred": { "GetData": ["cafea8f9b3707ba1", "cafe6e40d206cd7a"] } }
+				}
+			]
 		}
 	],
 	"patchVersion": 6

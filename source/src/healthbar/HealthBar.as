@@ -13,6 +13,8 @@ public class HealthBar extends BaseControl {
 
 	private var m_healthBarView:HealthBarView = new HealthBarView();
 	private var m_debugTextView:DebugTextView = new DebugTextView();
+	private var m_healthBarColourTransform:ColorTransform = new ColorTransform();
+	private var m_infectedColourTransform:ColorTransform = new ColorTransform();
 	private var m_currentHealth:Number;
 	private var m_isInfected:Boolean = false;
 	private var m_lowHealthColour:uint;
@@ -104,11 +106,10 @@ public class HealthBar extends BaseControl {
 		UpdateHealthBarColour();
 	}
 
-	private function UpdateHealthBarColour():void {
+	public function UpdateHealthBarColour():void {
 		if (m_isInfected) {
-			var yellow:ColorTransform = new ColorTransform();
-			yellow.color = m_infectedColour;
-			m_healthBarView.HealthBarInner.transform.colorTransform = yellow;
+			m_infectedColourTransform.color = m_infectedColour;
+			m_healthBarView.HealthBarInner.transform.colorTransform = m_infectedColourTransform;
 			return;
 		}
 
@@ -131,9 +132,8 @@ public class HealthBar extends BaseControl {
 			medium = interpolate(m_mediumHealthColour & 0xFF, m_fullHealthColour & 0xFF, middleToFullRatio);
 		}
 
-		var colorTransform:ColorTransform = new ColorTransform();
-		colorTransform.color = (low << 16) | (full << 8) | medium;
-		m_healthBarView.HealthBarInner.transform.colorTransform = colorTransform;
+		m_healthBarColourTransform.color = (low << 16) | (full << 8) | medium;
+		m_healthBarView.HealthBarInner.transform.colorTransform = m_healthBarColourTransform;
 	}
 
 	private function interpolate(start:uint, end:uint, ratio:Number):uint {

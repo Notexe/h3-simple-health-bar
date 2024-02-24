@@ -6,6 +6,45 @@
 	"description": "Adds a simple health bar to the left of the minimap.",
 	"authors": ["Notex"],
 	"contentFolders": ["content"],
+	"options": [
+		{
+			"name": "Default",
+			"tooltip": "Default colour scheme.",
+			"image": "colour_schemes\\main\\default_colours.png",
+			"type": "select",
+			"group": "Main",
+			"enabledByDefault": true,
+			"contentFolders": ["colour_schemes\\main\\default_colours"]
+		},
+		{
+			"name": "RGB",
+			"tooltip": "RGB colour scheme.",
+			"image": "colour_schemes\\main\\rgb.png",
+			"type": "select",
+			"group": "Main",
+			"enabledByDefault": false,
+			"contentFolders": ["colour_schemes\\main\\rgb"]
+		},
+		{
+			"name": "Default",
+			"tooltip": "Default colour scheme.",
+			"image": "colour_schemes\\secondary\\default_colours.png",
+			"type": "select",
+			"group": "Secondary",
+			"enabledByDefault": true,
+			"contentFolders": ["colour_schemes\\secondary\\default_colours"]
+		},
+		{
+			"name": "Bright",
+			"tooltip": "Bright colour scheme.",
+			"image": "colour_schemes\\secondary\\bright.png",
+			"type": "select",
+			"group": "Secondary",
+			"enabledByDefault": false,
+			"contentFolders": ["colour_schemes\\secondary\\bright"]
+		}
+	],
+	"dependencies": ["0078959F8D5E9291"],
 	"frameworkVersion": "2.33.7",
 	"updateCheck": "https://github.com/Notexe/h3-simple-health-bar/releases/latest/download/updates.json"
 }

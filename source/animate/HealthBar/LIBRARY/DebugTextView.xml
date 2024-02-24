@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="DebugTextView" itemID="65d6c03e-00000159" linkageExportForAS="true" linkageClassName="DebugTextView" lastModified="1708572898">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="DebugTextView" itemID="65d6c03e-00000159" linkageExportForAS="true" linkageClassName="DebugTextView" lastModified="1708751410">
   <timeline>
     <DOMTimeline name="DebugTextView" layerDepthEnabled="true">
       <layers>
@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMDynamicText name="DebugText" fontRenderingMode="standard" width="396" height="196" isSelectable="false">
+                <DOMDynamicText name="DebugText" selected="true" fontRenderingMode="standard" width="396" height="496" isSelectable="false">
                   <matrix>
                     <Matrix tx="2" ty="2"/>
                   </matrix>
@@ -14,7 +14,7 @@
                     <DOMTextRun>
                       <characters></characters>
                       <textAttrs>
-                        <DOMTextAttrs alignment="center" aliasText="false" lineSpacing="2.55" lineHeight="14.3" bitmapSize="240" face="Neue Haas Grotesk Display Pro 65 Medium*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs aliasText="false" lineSpacing="2.55" lineHeight="14.3" bitmapSize="240" face="Neue Haas Grotesk Display Pro 65 Medium*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>

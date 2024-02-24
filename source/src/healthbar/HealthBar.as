@@ -2,8 +2,10 @@ package healthbar {
 import common.BaseControl;
 
 import flash.events.Event;
+import flash.events.TimerEvent;
 
 import flash.geom.ColorTransform;
+import flash.utils.Timer;
 
 import scaleform.gfx.Extensions;
 
@@ -17,13 +19,65 @@ public class HealthBar extends BaseControl {
 	private var m_mediumHealthColour:uint;
 	private var m_fullHealthColour:uint;
 	private var m_infectedColour:uint;
-	private var m_DebugMode:Boolean;
+
+	private var checkCallEntityTimer:Timer;
+
+	// Debug thing
+	private var healthUpdateTimer:Timer;
+	private var healthChangeDirection:int = 1;
+	private var mainColoursObjectDebug:Object;
+	private var secondaryColoursObjectDebug:Object;
 
 	public function HealthBar() {
-		m_debugTextView.DebugText.visible = false;
 		Extensions.setEdgeAAMode(m_healthBarView, Extensions.EDGEAA_OFF)
-		addChild(m_healthBarView);
+
+		// Debug text setup
+		m_debugTextView.DebugText.visible = false;
+		m_debugTextView.scaleX = 1.5;
+		m_debugTextView.scaleY = 1.5;
+		m_debugTextView.x = 300;
+		m_debugTextView.y = -250;
+
+		WaitForCallEntity();
+
+		addChild(m_healthBarView)
 		addChild(m_debugTextView);
+	}
+
+	private function WaitForCallEntity():void {
+		checkCallEntityTimer = new Timer(100, 0);
+		checkCallEntityTimer.addEventListener(TimerEvent.TIMER, checkCallEntity);
+		checkCallEntityTimer.start();
+	}
+
+	private function checkCallEntity(event:TimerEvent):void {
+		if (CallEntity != null) {
+			checkCallEntityTimer.stop();
+			checkCallEntityTimer.removeEventListener(TimerEvent.TIMER, checkCallEntity);
+			send_RequestColours();
+		}
+	}
+
+	public function send_RequestColours():void {
+		sendEvent("RequestColours");
+	}
+
+	public function MainColours(object:Object):void {
+		LowHealthColour = object.MainColours.LowHealthColour;
+		MediumHealthColour = object.MainColours.MediumHealthColour;
+		FullHealthColour = object.MainColours.FullHealthColour;
+		InfectedColour = object.MainColours.InfectedColour;
+		UpdateHealthBarColour();
+		mainColoursObjectDebug = object.MainColours;
+	}
+
+	public function SecondaryColours(object:Object):void {
+		HealthBarTextColour = object.SecondaryColours.HealthBarTextColour;
+		HealthBarTextBGColour = object.SecondaryColours.HealthBarTextBGColour;
+		HealthBarTextBorderColour = object.SecondaryColours.HealthBarTextBorderColour;
+		HealthBarBGColour = object.SecondaryColours.HealthBarBGColour;
+		HealthBarBorderColour = object.SecondaryColours.HealthBarBorderColour;
+		secondaryColoursObjectDebug = object.SecondaryColours;
 	}
 
 	public function SetHealth(health:Number):void {
@@ -96,55 +150,55 @@ public class HealthBar extends BaseControl {
 		return colourValue;
 	}
 
-	public function set HealthBarTextColour(colour:String):void {
+	private function set HealthBarTextColour(colour:String):void {
 		var colourValue:uint = parseRGB(colour);
 		m_healthBarView.HealthBarText.textColor = colourValue;
 	}
 
-	public function set HealthBarTextBGColour(colour:String):void {
+	private function set HealthBarTextBGColour(colour:String):void {
 		var colourValue:uint = parseRGB(colour);
 		var colorTransform:ColorTransform = new ColorTransform();
 		colorTransform.color = colourValue;
 		m_healthBarView.HealthBarTextBG.transform.colorTransform = colorTransform;
 	}
 
-	public function set HealthBarTextBorderColour(colour:String):void {
+	private function set HealthBarTextBorderColour(colour:String):void {
 		var colourValue:uint = parseRGB(colour);
 		var colorTransform:ColorTransform = new ColorTransform();
 		colorTransform.color = colourValue;
 		m_healthBarView.HealthBarTextBorder.transform.colorTransform = colorTransform;
 	}
 
-	public function set HealthBarBGColour(colour:String):void {
+	private function set HealthBarBGColour(colour:String):void {
 		var colourValue:uint = parseRGB(colour);
 		var colorTransform:ColorTransform = new ColorTransform();
 		colorTransform.color = colourValue;
 		m_healthBarView.HealthBarBG.transform.colorTransform = colorTransform;
 	}
 
-	public function set HealthBarBorderColour(colour:String):void {
+	private function set HealthBarBorderColour(colour:String):void {
 		var colourValue:uint = parseRGB(colour);
 		var colorTransform:ColorTransform = new ColorTransform();
 		colorTransform.color = colourValue;
 		m_healthBarView.HealthBarBorder.transform.colorTransform = colorTransform;
 	}
 
-	public function set LowHealthColour(colour:String):void {
+	private function set LowHealthColour(colour:String):void {
 		var colourValue:uint = parseRGB(colour);
 		m_lowHealthColour = colourValue;
 	}
 
-	public function set MediumHealthColour(colour:String):void {
+	private function set MediumHealthColour(colour:String):void {
 		var colourValue:uint = parseRGB(colour);
 		m_mediumHealthColour = colourValue;
 	}
 
-	public function set FullHealthColour(colour:String):void {
+	private function set FullHealthColour(colour:String):void {
 		var colourValue:uint = parseRGB(colour);
 		m_fullHealthColour = colourValue;
 	}
 
-	public function set InfectedColour(colour:String):void {
+	private function set InfectedColour(colour:String):void {
 		var colourValue:uint = parseRGB(colour);
 		m_infectedColour = colourValue;
 	}
@@ -156,11 +210,11 @@ public class HealthBar extends BaseControl {
 	public function set DebugMode(bool:Boolean):void {
 		if (bool) {
 			addEventListener(Event.ENTER_FRAME, UpdateDebugText);
-			m_healthBarView.DebugText.visible = true;
+			m_debugTextView.DebugText.visible = true;
 		}
 		else {
 			removeEventListener(Event.ENTER_FRAME, UpdateDebugText);
-			m_healthBarView.DebugText.visible = false;
+			m_debugTextView.DebugText.visible = false;
 		}
 	}
 
@@ -176,13 +230,63 @@ public class HealthBar extends BaseControl {
 		var debugInfo:String = "";
 		debugInfo += "Current Health: " + Math.round(m_currentHealth) + "\n";
 		debugInfo += "Is Infected: " + m_isInfected + "\n";
-		debugInfo += "Low Health Red Colour: #" + m_lowHealthColour.toString(16) + "\n";
-		debugInfo += "Full Health Green Colour: #" + m_fullHealthColour.toString(16) + "\n";
+		if (mainColoursObjectDebug != null) {
+			debugInfo += "Main colours:\n";
+			debugInfo += "\tLowHealthColour: " + mainColoursObjectDebug.LowHealthColour + "\n";
+			debugInfo += "\tMediumHealthColour: " + mainColoursObjectDebug.MediumHealthColour + "\n";
+			debugInfo += "\tFullHealthColour: " + mainColoursObjectDebug.FullHealthColour + "\n";
+			debugInfo += "\tInfectedColour: " + mainColoursObjectDebug.InfectedColour + "\n";
+		}
+		else {
+			debugInfo += "Main colours:\n";
+			debugInfo += "\tLowHealthColour: \n";
+			debugInfo += "\tMediumHealthColour: \n";
+			debugInfo += "\tFullHealthColour: \n";
+			debugInfo += "\tInfectedColour: \n";
+		}
+		if (secondaryColoursObjectDebug != null) {
+			debugInfo += "Secondary colours:\n";
+			debugInfo += "\tHealthBarTextColour: " + secondaryColoursObjectDebug.HealthBarTextColour + "\n";
+			debugInfo += "\tHealthBarTextBGColour: " + secondaryColoursObjectDebug.HealthBarTextBGColour + "\n";
+			debugInfo += "\tHealthBarTextBorderColour: " + secondaryColoursObjectDebug.HealthBarTextBorderColour + "\n";
+			debugInfo += "\tHealthBarBGColour: " + secondaryColoursObjectDebug.HealthBarBGColour + "\n";
+			debugInfo += "\tHealthBarBorderColour: " + secondaryColoursObjectDebug.HealthBarBorderColour + "\n";
+		}
+		else {
+			debugInfo += "Secondary colours:\n";
+			debugInfo += "\tHealthBarTextColour: \n";
+			debugInfo += "\tHealthBarTextBGColour: \n";
+			debugInfo += "\tHealthBarTextBorderColour: \n";
+			debugInfo += "\tHealthBarBGColour: \n";
+			debugInfo += "\tHealthBarBorderColour: \n";
+		}
 
-		m_healthBarView.DebugText.text = debugInfo;
-		m_healthBarView.DebugText.visible = true;
-		m_healthBarView.DebugText.wordWrap = true;
-		m_healthBarView.DebugText.multiline = true;
+		m_debugTextView.DebugText.text = debugInfo;
+		m_debugTextView.DebugText.visible = true;
+		m_debugTextView.DebugText.wordWrap = true;
+		m_debugTextView.DebugText.multiline = true;
+	}
+
+	public function ToggleDebug():void {
+		if (healthUpdateTimer != null) {
+			healthUpdateTimer.stop();
+			healthUpdateTimer.removeEventListener(TimerEvent.TIMER, onDebugToggled);
+			healthUpdateTimer = null;
+		} else {
+			healthUpdateTimer = new Timer(10);
+			healthUpdateTimer.addEventListener(TimerEvent.TIMER, onDebugToggled);
+			healthUpdateTimer.start();
+		}
+	}
+
+	private function onDebugToggled(event:TimerEvent):void {
+		m_currentHealth += healthChangeDirection * 1;
+		m_currentHealth = Math.max(0, Math.min(100, m_currentHealth));
+		SetHealth(m_currentHealth);
+
+		if (m_currentHealth >= 100 || m_currentHealth <= 0) {
+			healthChangeDirection *= -1;
+		}
 	}
 
 }

@@ -87,18 +87,10 @@
 						"m_fAlpha": { "type": "float32", "value": 100.0 },
 						"Debug": { "type": "uint32", "value": 100 },
 						"DebugMode": { "type": "bool", "value": false },
-						"HealthBarTextColour": { "type": "ZString", "value": "#FFFFFF" },
-						"HealthBarTextBGColour": { "type": "ZString", "value": "#323232" },
-						"HealthBarTextBorderColour": { "type": "ZString", "value": "#000000" },
-						"HealthBarBGColour": { "type": "ZString", "value": "#323232" },
-						"HealthBarBorderColour": { "type": "ZString", "value": "#000000" },
-						"LowHealthColour": { "type": "ZString", "value": "#FA0000" },
-						"MediumHealthColour": { "type": "ZString", "value": "#FFFF00" },
-						"FullHealthColour": { "type": "ZString", "value": "#00BA00" },
-						"InfectedColour": { "type": "ZString", "value": "#FFFF00" },
 						"Height": { "type": "float32", "value": 1 },
 						"Width": { "type": "float32", "value": 1 }
-					}
+					},
+					"events": { "RequestColours": { "GetData": ["cafea8f9b3707ba1", "cafe6e40d206cd7a"] } }
 				}
 			]
 		},
@@ -184,6 +176,42 @@
 					"factory": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entitytype",
 					"blueprint": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entityblueprint",
 					"properties": { "m_pTargetControl": { "type": "SEntityTemplateReference", "value": "cafef77f80f5f691" } }
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafea8f9b3707ba1",
+				{
+					"parent": "cafeba446945a84b",
+					"name": "DynamicObject_Main",
+					"factory": "[modules:/zdynamicobjectentity.class].pc_entitytype",
+					"blueprint": "[modules:/zdynamicobjectentity.class].pc_entityblueprint",
+					"properties": {
+						"m_pJSONResource": {
+							"type": "ZRuntimeResourceID",
+							"value": "[assembly:/ui/data/healthbar/colours_main.json].pc_json"
+						}
+					},
+					"events": { "Data": { "MainColours": ["cafef77f80f5f691"] } }
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe6e40d206cd7a",
+				{
+					"parent": "cafeba446945a84b",
+					"name": "DynamicObject_Secondary",
+					"factory": "[modules:/zdynamicobjectentity.class].pc_entitytype",
+					"blueprint": "[modules:/zdynamicobjectentity.class].pc_entityblueprint",
+					"properties": {
+						"m_pJSONResource": {
+							"type": "ZRuntimeResourceID",
+							"value": "[assembly:/ui/data/healthbar/colours_secondary.json].pc_json"
+						}
+					},
+					"events": { "Data": { "SecondaryColours": ["cafef77f80f5f691"] } }
 				}
 			]
 		}

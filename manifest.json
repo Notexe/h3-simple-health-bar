@@ -440,7 +440,6 @@
 			"contentFolders": ["colour_schemes\\secondary\\rgb_y"]
 		}
 	],
-	"dependencies": ["0078959F8D5E9291"],
 	"frameworkVersion": "2.33.7",
 	"updateCheck": "https://github.com/Notexe/h3-simple-health-bar/releases/latest/download/updates.json"
 }

@@ -1,0 +1,9 @@
+{
+	"SecondaryColours": {
+		"HealthBarTextColour": "#D40000",
+		"HealthBarTextBGColour": "#F4F4F4",
+		"HealthBarTextBorderColour": "#F4F4F4",
+		"HealthBarBGColour": "#767F86",
+		"HealthBarBorderColour": "#767F86"
+	}
+}

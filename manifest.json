@@ -198,12 +198,21 @@
 		},
 		{
 			"name": "WOA Darker",
-			"tooltip": "Hitman WOA colour scheme to match the darker sections of the map.",
+			"tooltip": "Hitman WOA colour scheme to match the darker grey sections of the map.",
 			"image": "colour_schemes\\secondary\\hwoa_darker.png",
 			"type": "select",
 			"group": "Secondary",
 			"enabledByDefault": false,
 			"contentFolders": ["colour_schemes\\secondary\\hwoa_darker"]
+		},
+		{
+			"name": "WOA Dark",
+			"tooltip": "Hitman WOA colour scheme to match the dark grey sections of the map.",
+			"image": "colour_schemes\\secondary\\hwoa_dark.png",
+			"type": "select",
+			"group": "Secondary",
+			"enabledByDefault": false,
+			"contentFolders": ["colour_schemes\\secondary\\hwoa_dark"]
 		},
 		{
 			"name": "WOA Medium",
@@ -216,7 +225,7 @@
 		},
 		{
 			"name": "WOA Light",
-			"tooltip": "Hitman WOA colour scheme to match the light sections of the map.",
+			"tooltip": "Hitman WOA colour scheme to match the light grey sections of the map.",
 			"image": "colour_schemes\\secondary\\hwoa_lighter.png",
 			"type": "select",
 			"group": "Secondary",
@@ -225,7 +234,7 @@
 		},
 		{
 			"name": "WOA Lighter",
-			"tooltip": "Hitman WOA colour scheme to match the lighter sections of the map.",
+			"tooltip": "Hitman WOA colour scheme to match the lighter grey sections of the map.",
 			"image": "colour_schemes\\secondary\\hwoa_lighter.png",
 			"type": "select",
 			"group": "Secondary",
@@ -234,12 +243,21 @@
 		},
 		{
 			"name": "WOA Lightest",
-			"tooltip": "Hitman WOA colour scheme to match the lightest sections of the map.",
+			"tooltip": "Hitman WOA colour scheme to match the lightest grey sections of the map.",
 			"image": "colour_schemes\\secondary\\hwoa_lightest.png",
 			"type": "select",
 			"group": "Secondary",
 			"enabledByDefault": false,
 			"contentFolders": ["colour_schemes\\secondary\\hwoa_lightest"]
+		},
+		{
+			"name": "WOA White",
+			"tooltip": "Hitman WOA colour scheme with a white background.",
+			"image": "colour_schemes\\secondary\\hwoa_white.png",
+			"type": "select",
+			"group": "Secondary",
+			"enabledByDefault": false,
+			"contentFolders": ["colour_schemes\\secondary\\hwoa_white"]
 		},
 		{
 			"name": "2016 Black",

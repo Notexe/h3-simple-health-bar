@@ -21,6 +21,7 @@ public class HealthBar extends BaseControl {
 	private var m_mediumHealthColour:uint;
 	private var m_fullHealthColour:uint;
 	private var m_infectedColour:uint;
+	private var m_mediumHealthRatio:Number;
 
 	private var checkCallEntityTimer:Timer;
 
@@ -69,6 +70,7 @@ public class HealthBar extends BaseControl {
 		MediumHealthColour = object.MainColours.MediumHealthColour;
 		FullHealthColour = object.MainColours.FullHealthColour;
 		InfectedColour = object.MainColours.InfectedColour;
+		m_mediumHealthRatio = object.MainColours.MediumHealthRatio;
 		UpdateHealthBarColour();
 		mainColoursObjectDebug = object.MainColours;
 	}
@@ -106,7 +108,7 @@ public class HealthBar extends BaseControl {
 		UpdateHealthBarColour();
 	}
 
-	public function UpdateHealthBarColour():void {
+	private function UpdateHealthBarColour():void {
 		if (m_isInfected) {
 			m_infectedColourTransform.color = m_infectedColour;
 			m_healthBarView.HealthBarInner.transform.colorTransform = m_infectedColourTransform;
@@ -116,17 +118,15 @@ public class HealthBar extends BaseControl {
 		var m_maxHealth:Number = 100;
 		var healthRatio:Number = m_currentHealth / m_maxHealth;
 
-		var mediumHealthRatio:Number = 0.5;
-
 		var low:uint, medium:uint, full:uint;
 
-		if (healthRatio <= mediumHealthRatio) {
-			var lowToMiddleRatio:Number = healthRatio / mediumHealthRatio;
+		if (healthRatio <= m_mediumHealthRatio) {
+			var lowToMiddleRatio:Number = healthRatio / m_mediumHealthRatio;
 			low = interpolate((m_lowHealthColour >> 16) & 0xFF, (m_mediumHealthColour >> 16) & 0xFF, lowToMiddleRatio);
 			full = interpolate((m_lowHealthColour >> 8) & 0xFF, (m_mediumHealthColour >> 8) & 0xFF, lowToMiddleRatio);
 			medium = interpolate(m_lowHealthColour & 0xFF, m_mediumHealthColour & 0xFF, lowToMiddleRatio);
 		} else {
-			var middleToFullRatio:Number = (healthRatio - mediumHealthRatio) / (1 - mediumHealthRatio);
+			var middleToFullRatio:Number = (healthRatio - m_mediumHealthRatio) / (1 - m_mediumHealthRatio);
 			low = interpolate((m_mediumHealthColour >> 16) & 0xFF, (m_fullHealthColour >> 16) & 0xFF, middleToFullRatio);
 			full = interpolate((m_mediumHealthColour >> 8) & 0xFF, (m_fullHealthColour >> 8) & 0xFF, middleToFullRatio);
 			medium = interpolate(m_mediumHealthColour & 0xFF, m_fullHealthColour & 0xFF, middleToFullRatio);

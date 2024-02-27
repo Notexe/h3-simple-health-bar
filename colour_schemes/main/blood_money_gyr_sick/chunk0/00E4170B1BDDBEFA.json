@@ -3,6 +3,7 @@
 		"LowHealthColour": "#D40000",
 		"MediumHealthColour": "#E7C216",
 		"FullHealthColour": "#00AB08",
-		"InfectedColour": "#A0B000"
+		"InfectedColour": "#A0B000",
+		"MediumHealthRatio": 0.5
 	}
 }

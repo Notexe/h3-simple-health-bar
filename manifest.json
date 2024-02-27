@@ -179,6 +179,15 @@
 			"contentFolders": ["colour_schemes\\main\\bloody_legacy_reversed"]
 		},
 		{
+			"name": "Paladins",
+			"tooltip": "Paladins health bar colour scheme using Blue for full and medium, red-orange for low, and a slight off-yellow for infected.",
+			"image": "colour_schemes\\main\\paladins.png",
+			"type": "select",
+			"group": "Main",
+			"enabledByDefault": false,
+			"contentFolders": ["colour_schemes\\main\\paladins"]
+		},
+		{
 			"name": "Default",
 			"tooltip": "Default colour scheme.",
 			"image": "colour_schemes\\secondary\\default_colours.png",

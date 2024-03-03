@@ -90,7 +90,7 @@
 						"Height": { "type": "float32", "value": 1 },
 						"Width": { "type": "float32", "value": 1 }
 					},
-					"events": { "RequestColours": { "GetData": ["cafea8f9b3707ba1", "cafe6e40d206cd7a"] } }
+					"events": { "RequestData": { "GetData": ["cafea8f9b3707ba1", "cafe6e40d206cd7a"] } }
 				}
 			]
 		},
@@ -103,8 +103,11 @@
 					"factory": "[modules:/zhm5healthsoundcontroller.class].pc_entitytype",
 					"blueprint": "[modules:/zhm5healthsoundcontroller.class].pc_entityblueprint",
 					"events": {
-						"CurrentHealth": { "SetHealth": ["cafef77f80f5f691"] },
-						"Died": { "SetHealth": [{ "ref": "cafef77f80f5f691", "value": { "type": "float32", "value": 0 } }] }
+						"CurrentHealth": { "SetTextHealth": ["cafef77f80f5f691"], "GetHealth": ["cafea104c0198b1a"] },
+						"Died": {
+							"SetTextHealth": [{ "ref": "cafef77f80f5f691", "value": { "type": "float32", "value": 0 } }],
+							"SetBarHealth": [{ "ref": "cafef77f80f5f691", "value": { "type": "float32", "value": 0 } }]
+						}
 					}
 				}
 			]
@@ -225,6 +228,18 @@
 					"blueprint": "[modules:/zgameeventlistenerentity.class].pc_entityblueprint",
 					"properties": { "m_eEvent": { "type": "EGameEventType", "value": "GET_SavegameRestored" } },
 					"events": { "EventOccurred": { "GetData": ["cafea8f9b3707ba1", "cafe6e40d206cd7a"] } }
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafea104c0198b1a",
+				{
+					"parent": "cafeba446945a84b",
+					"name": "HitmanHealthModifier",
+					"factory": "[modules:/zhm5hitmanhealthmodifier.class].pc_entitytype",
+					"blueprint": "[modules:/zhm5hitmanhealthmodifier.class].pc_entityblueprint",
+					"events": { "OnGetHealth": { "SetBarHealth": ["cafef77f80f5f691"] } }
 				}
 			]
 		}

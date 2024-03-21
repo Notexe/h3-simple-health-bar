@@ -32,7 +32,7 @@ public class HealthBar extends BaseControl {
 	private var m_debugTextField:TextField;
 
 	public function HealthBar() {
-		Extensions.setEdgeAAMode(m_healthBarView, Extensions.EDGEAA_OFF)
+		Extensions.setEdgeAAMode(m_healthBarView, Extensions.EDGEAA_OFF);
 
 		m_debugTextField = new TextField();
 		m_debugTextField.visible = false;
@@ -46,7 +46,7 @@ public class HealthBar extends BaseControl {
 		var m_debugTextFieldFormat:TextFormat = new TextFormat();
 		m_debugTextFieldFormat.size = 18;
 		m_debugTextFieldFormat.font = "$medium";
-		m_debugTextFieldFormat.color = 0xffffff
+		m_debugTextFieldFormat.color = 0xffffff;
 		m_debugTextField.defaultTextFormat = m_debugTextFieldFormat;
 
 		WaitForCallEntity();
@@ -94,7 +94,7 @@ public class HealthBar extends BaseControl {
 
 	public function SetBarHealth(health:Number):void {
 		m_currentHealthBar = health;
-		UpdateHealth()
+		UpdateHealth();
 	}
 
 	public function SetTextHealth(health:Number):void {
@@ -216,8 +216,7 @@ public class HealthBar extends BaseControl {
 		if (bool) {
 			addEventListener(Event.ENTER_FRAME, UpdateDebugText);
 			m_debugTextField.visible = true;
-		}
-		else {
+		} else {
 			removeEventListener(Event.ENTER_FRAME, UpdateDebugText);
 			m_debugTextField.visible = false;
 		}
@@ -241,8 +240,7 @@ public class HealthBar extends BaseControl {
 			debugInfo += "\tMediumHealthColour: " + mainColoursObjectDebug.MediumHealthColour + "\n";
 			debugInfo += "\tFullHealthColour: " + mainColoursObjectDebug.FullHealthColour + "\n";
 			debugInfo += "\tInfectedColour: " + mainColoursObjectDebug.InfectedColour + "\n";
-		}
-		else {
+		} else {
 			debugInfo += "Main colours:\n";
 			debugInfo += "\tLowHealthColour: \n";
 			debugInfo += "\tMediumHealthColour: \n";
@@ -256,8 +254,7 @@ public class HealthBar extends BaseControl {
 			debugInfo += "\tHealthBarTextBorderColour: " + secondaryColoursObjectDebug.HealthBarTextBorderColour + "\n";
 			debugInfo += "\tHealthBarBGColour: " + secondaryColoursObjectDebug.HealthBarBGColour + "\n";
 			debugInfo += "\tHealthBarBorderColour: " + secondaryColoursObjectDebug.HealthBarBorderColour + "\n";
-		}
-		else {
+		} else {
 			debugInfo += "Secondary colours:\n";
 			debugInfo += "\tHealthBarTextColour: \n";
 			debugInfo += "\tHealthBarTextBGColour: \n";

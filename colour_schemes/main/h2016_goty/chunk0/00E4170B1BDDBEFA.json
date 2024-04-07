@@ -4,6 +4,6 @@
 		"MediumHealthColour": "#FFFFFF",
 		"FullHealthColour": "#FFFFFF",
 		"InfectedColour": "#F8EE2F",
-		"MediumHealthRatio": 0.2
+		"MediumHealthRatio": 0.3
 	}
 }

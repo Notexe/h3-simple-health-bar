@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
-	"version": "1.8.1",
+	"version": "1.8.2",
 	"id": "Notex.SimpleHealthBar",
 	"name": "Simple Health Bar",
 	"description": "Adds a simple health bar to the left of the minimap.",
@@ -449,6 +449,6 @@
 			"contentFolders": ["colour_schemes\\secondary\\rgb_y"]
 		}
 	],
-	"frameworkVersion": "2.33.7",
+	"frameworkVersion": "2.33.9",
 	"updateCheck": "https://github.com/Notexe/h3-simple-health-bar/releases/latest/download/updates.json"
 }

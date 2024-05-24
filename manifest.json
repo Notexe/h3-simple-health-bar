@@ -8,6 +8,13 @@
 	"contentFolders": ["content"],
 	"options": [
 		{
+			"name": "Disable grey health postfilter effect",
+			"tooltip": "Disables the grey health postfilter effect when 47 takes damage and dies.",
+			"type": "checkbox",
+			"enabledByDefault": false,
+			"contentFolders": ["disable_grey_health_postfilter"]
+		},
+		{
 			"name": "Default",
 			"tooltip": "Default colour scheme.",
 			"image": "colour_schemes\\main\\default_colours.png",

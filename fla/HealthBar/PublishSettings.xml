@@ -27,7 +27,7 @@
     <gifFileName>HealthBar.gif</gifFileName>
     <jpegFileName>HealthBar.jpg</jpegFileName>
     <pngFileName>HealthBar.png</pngFileName>
-    <swcFileName>..\lib\HealthBar.swc</swcFileName>
+    <swcFileName>../actionscript/lib/HealthBar.swc</swcFileName>
     <oamFileName>HealthBar.oam</oamFileName>
     <publishFormat id="3E6AA359-3A3C-4827-B709-9977BDDDACCB">0</publishFormat>
     <publishFormat id="BBC1F406-65F2-4219-9304-FA48C7549E44">0</publishFormat>
